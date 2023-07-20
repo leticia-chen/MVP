@@ -3,17 +3,17 @@ Boston Housing is a model that attempts to apply various machine learning algori
 ### Dataset
 <a href="https://www.kaggle.com/c/boston-housing">Boston Housing Dataset</a>
 ### Process (all you can find in Boston_Housing file):
-#### Checking if there are missing datas
-#### Features Analysis
-* Using the SelectKBest() model to get the performance of each features
-* After feature analysis, one with all features included and another with the 'chas' feature removed, trained simultaneously
-#### Using Cross validation to evaluate the performance of 12 models with two type dataset
-* XGB, Bagging, R-Forest, and also keep SVM model to next step because SVM's structure is diferente from models selected
-#### Traning selected models
-* Setting pipeline
-* Using Grid Search to perform hyperparameter optimization
-* Building the GridSearchCV model to get the best parameters of each model selected
-#### Getting preditions from Test dataset for kaggle competition
+  #### Checking if there are missing datas
+  #### Features Analysis
+  * Using the SelectKBest() model to get the performance of each features
+  * After feature analysis, one with all features included and another with the 'chas' feature removed, trained simultaneously
+  #### Using Cross validation to evaluate the performance of 12 models with two type dataset
+  * XGB, Bagging, R-Forest, and also keep SVM model to next step because SVM's structure is diferente from models selected
+  #### Traning selected models
+  * Setting pipeline
+  * Using Grid Search to perform hyperparameter optimization
+  * Building the GridSearchCV model to get the best parameters of each model selected
+  #### Getting preditions from Test dataset for kaggle competition
 
 ### Result
 * BaggingRegressor_RMS get the best RMS Erro
