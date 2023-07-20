@@ -15,5 +15,10 @@ Boston Housing is a model that attempts to apply various machine learning algori
 * Building the GridSearchCV model to get the best parameters of each model selected
 #### Getting preditions from Test dataset for kaggle competition
 
+### Result
+* BaggingRegressor_RMS get the best RMS Erro
+* XGBRegressor get the best score from Kaggle challenges
+* The general performance of dataset with all features is better than dataset with features withou "Chas" even the best performance is XGBRegressor no 'Chas'. This can be beacause the number of datasets is small, therefore every feature is important for its performance.
+
 
 
