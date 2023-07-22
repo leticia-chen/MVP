@@ -26,7 +26,7 @@ Pretrained models were used for tokenization: bert-base-cased
 
 ![image](https://github.com/leticia-chen/MVP/blob/main/Image%20Captioning/Images/First_training_epoch3_prediction.png)
 
-<img src="https://your-image-url.type" width="50" height="50">
+<img src="https://github.com/leticia-chen/MVP/blob/main/Image%20Captioning/Images/First_training_epoch3_prediction.png" width="50" height="50">
 
 * I made a modification to the decoder model's structure: in the forward function, I rearranged the order of operations. Instead of converting the encoded image and encoded ids' hidden dimensions to the decoder dim before fusion, I first fused the encoded image and encoded ids, and then converted them to the decoder dim. After making this adjustment, the demo() function was able to generate captions for unseen images successfully.
   ```
