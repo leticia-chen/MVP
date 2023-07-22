@@ -24,8 +24,6 @@ Pretrained models were used for tokenization: bert-base-cased
   
   This suggests that the issue might not be related to overfitting or the dropout rate but could be attributed to other factors affecting the model's performance during the generation of captions for unseen images. Further investigation is required to identify the root cause of the problem.
 
-
-
 <img src="Images/First_training_epoch3_prediction.png" height = "300"> <img src="Images/train_test_loss_bleu_final_25epochs.png" height = "300">
 
 * I made a modification to the decoder model's structure: in the forward function, I rearranged the order of operations. Instead of converting the encoded image and encoded ids' hidden dimensions to the decoder dim before fusion, I first fused the encoded image and encoded ids, and then converted them to the decoder dim. After making this adjustment, the demo() function was able to generate captions for unseen images successfully.
@@ -48,3 +46,29 @@ Pretrained models were used for tokenization: bert-base-cased
   num_layers = 6      
   num_epoch = 10
   ```
+  Type 2:
+  ```
+  batch_size = 100
+  lr = 0.00003        
+  encoder_dim = 768   
+  decoder_dim = 768   
+  d_model = 768       
+  nhead = 8           
+  num_layers = 6      
+  num_epoch = 8
+  ```
+  Type 3:
+  ```
+  batch_size = 100
+  lr = 0.00003        
+  encoder_dim = 768   
+  decoder_dim = 512   
+  d_model = 512       
+  nhead = 16           
+  num_layers = 8      
+  num_epoch = 10
+  dropout = 0.2
+  ```
+
+
+  
