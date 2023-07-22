@@ -73,6 +73,9 @@ Pretrained models were used for tokenization: bert-base-cased
   
   To further improve type 3, I decided to train it for an additional 8 epochs. However, as the loss improvement became slower over time, I made the decision to increase the learning rate from 0.00003 to 0.0003 for the last 3 epochs.
 * Increasing the training or raising the learning rate for Type3 did not improve the performance of the demo() function in generating captions for unseen images. The best result was achieved with Type 1. For evaluation purposes, I used a single fixed unseen image.
+
+  Type 1 training performance:
+  <img src="Images/Training_over_epochs_type1.png" height = "300"> <img src="Images/model_performance_type1.png" height = "300">
   
 #### Analyzing the training results for Type1, the performance metrics such as train loss, test loss, and BLEU score were all good, and the generated captions during test() looked promising. However, despite the positive indicators, the performance of demo() in generating captions for unseen images was not satisfactory. The generated captions from demo() contained some keywords representing the image, but the sentences lacked coherence. Apart from further optimizing the model, another possible factor contributing to this issue could be the limited dataset size, as the Flickr8k Dataset only consists of 8,091 images.
 
