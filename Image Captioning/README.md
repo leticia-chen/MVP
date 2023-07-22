@@ -19,6 +19,7 @@
   encoded_images = self.fc_image(encoded_images)
   ```
 * Next, I retrained the model and tried various combinations and parameters, I will list three of the most representative ones:
+
   Tpye 1:
   ```
   batch_size = 100
