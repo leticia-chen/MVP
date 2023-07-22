@@ -12,9 +12,9 @@
   
   This suggests that the issue might not be related to overfitting or the dropout rate but could be attributed to other factors affecting the model's performance during the generation of captions for unseen images. Further investigation is required to identify the root cause of the problem.
 * I made a modification to the decoder model's structure: in the forward function, I rearranged the order of operations. Instead of converting the encoded image and encoded ids' hidden dimensions to the decoder dim before fusion, I first fused the encoded image and encoded ids, and then converted them to the decoder dim. After making this adjustment, the demo() function was able to generate captions for unseen images successfully.
-  '''
+  ```
   combined_features = encoded_images + bert_embeddings      # (batch_size, sequence_length, encoder_dim)
   combined_features = self.fc_combined(combined_features)   # (batch_size, 40, 768)
   combined_features = self.activation(combined_features)
   encoded_images = self.fc_image(encoded_images)
-  '''
+  ```
