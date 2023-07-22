@@ -5,11 +5,9 @@
 Pretrained models were used for tokenization: bert-base-cased
 
 ### Models
-Image encoder: using viT_pretrained_model - google/vit-base-patch16-224
-
-Caption encoding: using AutoModel.from_pretrained('bert-base-cased', config=bert_config)
-
-Decoder: TransformerDecoder
+* Image encoder: using viT_pretrained_model - google/vit-base-patch16-224
+* Caption encoding: using AutoModel.from_pretrained('bert-base-cased', config=bert_config)
+* Decoder: TransformerDecoder
 
 ### Matric tools
 * Cross Entropy Loss
