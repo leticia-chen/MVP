@@ -11,6 +11,9 @@ Caption encoding: using AutoModel.from_pretrained('bert-base-cased', config=bert
 
 Decoder: TransformerDecoder
 
+### Matric tools
+* Cross Entropy Loss
+* BLEU 
 
 ### The model's performance and issues during training
 
