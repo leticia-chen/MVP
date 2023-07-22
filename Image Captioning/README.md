@@ -18,3 +18,15 @@
   combined_features = self.activation(combined_features)
   encoded_images = self.fc_image(encoded_images)
   ```
+* Next, I retrained the model and tried various combinations and parameters, I will list three of the most representative ones:
+  Tpye 1:
+  ```
+  batch_size = 100
+  lr = 0.00003        
+  encoder_dim = 768   
+  decoder_dim = 512   
+  d_model = 512       
+  nhead = 8           
+  num_layers = 6      
+  num_epoch = 10
+  ```
