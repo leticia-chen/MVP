@@ -1,6 +1,17 @@
 ## Image Captioning - Deep Learning
 ### Dataset
 <a href="https://www.kaggle.com/datasets/adityajn105/flickr8k?select=Images">Flickr 8k Dataset</a>
+
+Pretrained models were used for tokenization: bert-base-cased
+
+### Models
+Image encoder: using viT_pretrained_model - google/vit-base-patch16-224
+
+Caption encoding: using AutoModel.from_pretrained('bert-base-cased', config=bert_config)
+
+Decoder: TransformerDecoder
+
+
 ### The model's performance and issues during training
 
 * During the training process, both train loss and test loss decreased rapidly, and the model was often able to generate correct captions during the test() function by epoch 3. To assess the model's similarity score, Bleu was used. Additionally, the test loss was monitored to observe its decreasing pattern, and after each epoch, the predicted captions were printed using the test() function.
