@@ -3,23 +3,44 @@ Boston Housing is a model that attempts to apply various machine learning algori
 ### Dataset
 <a href="http://lib.stat.cmu.edu/datasets/boston">Boston Housing Dataset</a>
 
-### Process (all you can find in Boston_Housing file):
-  #### Checking if there are missing datas
-  #### Features Analysis
-  * Using the SelectKBest() model to get the performance of each features
-  * After feature analysis, one with all features included and another with the 'chas' feature removed, trained simultaneously
-  #### Using Cross validation to evaluate the performance of 12 models with two type dataset
-  * XGB, Bagging, R-Forest, and also keep SVM model to next step because SVM's structure is diferente from models selected
-  #### Traning selected models
-  * Setting pipeline
-  * Using Grid Search to perform hyperparameter optimization
-  * Building the GridSearchCV model to get the best parameters of each model selected
-  #### Getting preditions from Test dataset for kaggle competition
+### Introdution:
+
+In my academic journey at PUC Rio, a pivotal phase of pursuing my postgraduate studies, I am deeply immersed in the sophisticated realms of machine learning and deep learning. This educational odyssey is not just a comprehensive application of the knowledge acquired but also marks the stage where we showcase our skills and creativity through the development of a Minimum Viable Product (MVP).
+
+For my machine learning project, I have meticulously chosen linear regression as the central theme for exploration, focusing on analyzing the rich dataset of Boston Housing prices. This dataset encompasses a variety of features of houses in the Boston area, such as the number of rooms, crime rate, and property tax rates, all crucial elements that shape the dynamics of housing prices.
+
+Through this endeavor, I plan to precisely predict housing prices using a linear regression model and delve into how various features impact real estate values. This will not only deepen my understanding of machine learning theories but also provide a valuable experience of applying these theories to real-world data. This process is a significant enhancement of my data science skills and an important exploration of my depth of insight into real estate market analysis.
+
+### Overview:
+
+This Minimum Viable Product (MVP) will showcase my comprehensive skills in the field of machine learning, particularly in data processing, analysis, and model application. Specifically, my MVP will encompass the following key components:
+
+Data ETL (Extract, Transform, Load): I will extract data from the Boston Housing dataset and perform necessary transformations and cleaning to ensure data quality and usability. This step is crucial for subsequent analysis as clean, structured data is the foundation for building effective models.
+
+Data Analysis: Next, I will conduct an in-depth analysis of the data to identify key features that may impact housing prices. This involves exploring various variables in the dataset and conducting statistical analyses to understand how these features interact and influence prices.
+
+Model Selection: Based on the understanding of the data, I will choose the most suitable machine learning model for this dataset and prediction objective. While linear regression will be a primary consideration, I will also evaluate other potential models to ensure the final choice can predict housing prices most effectively.
+
+Model Tuning: Finally, I will fine-tune the selected model, including parameter optimization and cross-validation, to enhance prediction accuracy. The goal at this stage is to ensure the model performs well not only on the training data but also adapts effectively to new, unseen data.
+
+Additionally, the MVP incorporates:
+
+Advanced Data Processing and Model Optimization: Implementing sophisticated techniques such as data segmentation, adjusting sample weights, and introducing polynomial features to enhance model predictions, especially for high-value properties. These methods aimed to improve model accuracy in specific price ranges but also highlighted the complexity and challenges in predicting housing prices in dynamic markets.
+
+Through this MVP, I aim to demonstrate my data science skills and effectively predict and analyze the Boston Housing dataset.
 
 ### Result
-* BaggingRegressor_RMS get the best RMS Erro
-* XGBRegressor get the best score from Kaggle challenges
-* The general performance of dataset with all features is better than dataset with features withou "Chas" even the best performance is XGBRegressor no 'Chas'. This can be beacause the number of datasets is small, therefore every feature is important for its performance.
+
+Based on the in-depth analysis and various model optimization experiments of the Boston Housing Price Prediction project, the following professional conclusions can be drawn as the Minimum Viable Product (MVP) of this project:
+
+**Model Performance Analysis**: In the dataset containing 12 features, the GradientBoostingRegressor and XGBRegressor demonstrated excellent performance, especially in predicting housing prices (medv-price), with Root Mean Squared Errors (RMSE) of 2.93 and 2.84, respectively. This indicates their effectiveness in predicting most data points. However, for housing prices exceeding 25.00, the models showed significant fluctuations in predictions, indicating a need for improved accuracy in predicting high-value properties.
+
+**Data Processing and Model Optimization Strategies:**
+* Data Segmentation: The method of dividing the data into lower and higher price ranges, with independent model training and optimization for each range, helped capture the features of properties in different price ranges. However, the combined model predictions did not meet expectations.
+* Increasing Specific Sample Weights: The strategy of increasing the weights for high-value property samples aimed to enhance their impact on the model training, thereby improving the accuracy of predictions in these areas. The experimental results showed limited effectiveness in improving prediction fluctuations.
+* **Introducing Polynomial Features:** By considering higher-order features and interactions between features to capture nonlinear relationships, especially for high-value property predictions. The experiments showed that polynomial features improved the performance of the GBR and XGB models in the 5-feature dataset, resulting in superior performance in terms of L2 Loss (MSE) compared to any other models.
+
+Overall, these strategies contributed to improving the accuracy of Boston housing price predictions, particularly in dealing with data with complex feature relationships. However, challenges remain in predicting high-value properties, and future work can focus on further optimizing models and exploring more effective data processing methods to enhance the predictive ability in these specific areas.
 
 
 
